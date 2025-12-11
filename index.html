@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odległość punktu od prostej</title>
+    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="linia.css">
+</head>
+<body>
+    <h1><b>Obliczenie odległości punktu od prostej</b></h1>
+
+    <div class="content">
+        <div id="plot"></div>
+
+        <div class="korekta">
+            <div>
+                <label for="equation">Równanie prostej (ax+b lub stała)</label>
+                <input id="equation" type="text" placeholder="np. 2*x+1, x+3, 5, -2.1">
+
+                <div style="height:10px"></div>
+
+                <div>
+                <label>Punkt</label>
+                <input id="px" type="number" placeholder="x₀">
+                <input id="py" type="number" placeholder="y₀">
+                </div>
+
+                <div style="height:10px"></div>
+                <div>
+                <strong>Uwaga:</strong> Korzystamy ze wzoru na odległość punktu od prostej: <br>
+                \( \displaystyle d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}} \).<br>
+                Licznik i mianownik obliczamy oddzielnie, aby pokazać pełne kroki.
+                </div>
+
+                <div style="display:flex; gap:10px;">
+                <button onclick="draw()">Rysuj</button>
+                <button class="secondary" onclick="addPoint()">Dodaj punkt i pokaż kroki</button>
+                </div>
+                
+                <div class="card" style="padding:12px;">
+                    <div id="info" class="info math-block">
+                        <em>Wprowadź prostą i punkt, aby zobaczyć kroki obliczeń tutaj.</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="linia.js"></script>
+</body>
+</html>

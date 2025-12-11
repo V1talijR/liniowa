@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: lightpink;
+    font-family: cursive;
+    margin: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#plot {
+    flex: 1;
+}
+
+#plot svg {
+    background-color: white;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.korekta {
+     flex: 1;
+}
+
+button {
+    background-color: #F5DBC4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 760px) {
+    .content {
+        flex-direction: column;
+    }
+}
